@@ -49,7 +49,6 @@ function App() {
 
 function Chart() {
   const r = useMalloyQuery("run: example -> top_products");
-  console.log({ r });
   if (r) return <MalloyRender result={r} />;
   return null;
 }

@@ -1,6 +1,6 @@
 import "@malloydata/render";
 import { Result, QueryResult, ModelDef } from "@malloydata/malloy";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 
 declare global {
   namespace JSX {
@@ -28,11 +28,21 @@ export function MalloyRender({
   queryResult,
   modelDef,
 }: MalloyRenderProps) {
-  return (
-    <malloy-render
-      result={result}
-      queryResult={queryResult}
-      modelDef={modelDef}
-    />
-  );
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (ref.current) {
+      let render = ref.current.querySelector("malloy-render");
+      if (!render) {
+        render = document.createElement("malloy-render");
+        render.result = result;
+        render.queryResult = queryResult;
+        render.modelDef = modelDef;
+        ref.current.appendChild(render);
+      }
+      render.result = result;
+      render.queryResult = queryResult;
+      render.modelDef = modelDef;
+    }
+  }, [result, queryResult, modelDef]);
+  return <div ref={ref} />;
 }
