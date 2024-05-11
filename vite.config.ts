@@ -7,6 +7,7 @@ import dts from "vite-plugin-dts";
 export default defineConfig({
   plugins: [react(), dts()],
   build: {
+    minify: false,
     lib: {
       entry: resolve(__dirname, "src/index.ts"),
       formats: ["es"],
