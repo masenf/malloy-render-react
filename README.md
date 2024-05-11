@@ -7,7 +7,7 @@ A React component for rendering Malloy results. Takes either a `result` object o
 ```javascript
 <MalloyRender result={result} />
 
-<MalloyRender queryResult={queryResult} modelDef={modelDef}>
+<MalloyRender queryResult={queryResult} modelDef={modelDef} />
 ```
 
 ## Malloy DuckDB WASM Hooks
