@@ -1,12 +1,5 @@
 # Malloy Render React components
 
-export { MalloyRender } from "./malloy-render";
-export {
-useMalloyModel,
-useMalloyQuery,
-MalloyModelProvider,
-} from "./use-malloy-duckdb";
-
 ## \<MalloyRender />
 
 A React component for rendering Malloy results. Takes either a `result` object or a combination of `queryResult` and `modelDef`:
