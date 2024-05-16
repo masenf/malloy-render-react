@@ -15,7 +15,8 @@
     "lib": ["es6", "dom"],
     "declaration": true,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+    "skipLibCheck": true
   },
   "include": ["./src"],
   "exclude": ["node_modules", "dist"]

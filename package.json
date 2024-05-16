@@ -18,8 +18,8 @@
   },
   "homepage": "https://github.com/malloydata/malloy-render-react#readme",
   "dependencies": {
-    "@malloydata/db-duckdb": "^0.0.144",
-    "@malloydata/render": "^0.0.144"
+    "@malloydata/db-duckdb": "^0.0.145",
+    "@malloydata/render": "^0.0.145"
   },
   "devDependencies": {
     "@types/emscripten": "^1.39.11",
